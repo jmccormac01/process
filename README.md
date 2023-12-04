@@ -44,7 +44,8 @@ The ```jastro``` routines will build master calibration frames if the correspond
 
 Data reduction is done in memory to save disc space. Master calibration frames are saved but reduced science frames are not. Photometry is extracted in memory and store in output files.
 
-Photometry is then analysed with a second analysis script (e.g. ```analyse_leowasp.py```)
+Photometry is then analysed with a second analysis script e.g:
+```python /path/to/process_scripts/analyse_leowasp.py night_config.json inst_config.json rtp.phot7.0```
 
 ## Example nightly config
 
@@ -89,6 +90,7 @@ Photometry is then analysed with a second analysis script (e.g. ```analyse_leowa
         ],
         "ra_keyword": "MNTRA",
         "dec_keyword": "MNTDEC",
+        "object_keyword": "OBJECT",
         "image_keyword": "SCIENCE",
         "flat_keyword": "FLAT",
         "bias_keyword": "BIAS",
@@ -134,3 +136,4 @@ annulus(5048.4832,3392.7397,20.0,30.0) # text={5}
 # Contributors
 
 James McCormac
+Paul Strøm
